@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سياسة الخصوصية - تطبيق دفتر حساباتي | Privacy Policy - My Ledger</title>
+  <noscript>
+    <style>
+      #en-section {
+        display: block !important;
+      }
+    </style>
+  </noscript>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -75,8 +82,7 @@
       <p><strong>تاريخ آخر تحديث:</strong> 4 أكتوبر 2026</p>
 
       <p>نحن في تطبيق "دفتر حساباتي" نولي أهمية قصوى لخصوصية مستخدمينا. توضح هذه السياسة كيف نتعامل مع بياناتك، والضمانات
-        التي
-        نقدمها لحماية معلوماتك.</p>
+        التي نقدمها لحماية معلوماتك.</p>
 
       <h2>1. جمع البيانات وتخزينها</h2>
       <p>تطبيق "دفتر حساباتي" هو تطبيق يعمل بشكل <strong>محلي تماماً (Offline)</strong>. جميع بياناتك المالية، الحسابات،
@@ -120,8 +126,7 @@
       </ul>
 
       <h2>5. حماية البيانات</h2>
-      <p>نحن نوفر آليات أمان مدمجة في التطبيق مثل القفل بكلمة المرور (PIN) أو البصمة البيومترية لحماية وصول المتطفلين
-        إلى
+      <p>نحن نوفر آليات أمان مدمجة في التطبيق مثل القفل بكلمة مرور (PIN) أو البصمة البيومترية لحماية وصول المتطفلين إلى
         بياناتك في حالة استخدام جهازك، إضافة إلى تشفير النسخ الاحتياطية بمعيار AES — وتبقى بصمتك ضمن نظام أندرويد ولا
         يصلها التطبيق إطلاقاً.</p>
 
@@ -145,7 +150,7 @@
     </div>
 
     <div id="en-section" dir="ltr">
-      <h1>Privacy Policy — "My Ledger" (دفتر حساباتي)</h1>
+      <h1>Privacy Policy — "My Ledger"</h1>
       <p><strong>Last updated:</strong> October 4, 2026</p>
 
       <p>At "My Ledger" we place the utmost importance on our users' privacy. This policy explains how we handle your
@@ -229,19 +234,4 @@
       html.lang = lang;
       html.dir = lang === 'ar' ? 'rtl' : 'ltr';
       toggle.textContent = lang === 'ar' ? 'English' : 'العربية';
-      toggle.href = '#' + lang;
-    }
-
-    var lang = (window.location.hash === '#en' || window.location.hash === '#ar')
-      ? window.location.hash.slice(1)
-      : (navigator.language || '').indexOf('ar') === 0 ? 'ar' : 'en';
-    apply(lang);
-
-    toggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      apply(html.lang === 'ar' ? 'en' : 'ar');
-    });
-  </script>
-</body>
-
-</html>
+      toggle.href = '#' + (lang === 'ar
